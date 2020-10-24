@@ -13,17 +13,21 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 100.0
-margin_bottom = 100.0
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 50, 50 )
 color = Color( 0.764706, 0.764706, 0.623529, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = -1.0
-margin_right = 100.0
-margin_bottom = 100.0
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
 custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
