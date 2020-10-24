@@ -75,6 +75,9 @@ func delete_number_item(index: int):
 	self.checkboardList[index].queue_free()
 	self.checkboardList[index] = null
 
+func _on_RestartBtn_pressed():
+	$ConfirmationDialog.popup()
+
 func restart():
 	for i in self.checkboardList:
 		if(i != null):
