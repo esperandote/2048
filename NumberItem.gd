@@ -11,6 +11,7 @@ enum MoveStatus {
 # hsl(50, 50%, 80%)
 const colors = ['#dde6b3', '#e6ddb3', '#e6ccb3', '#e6bbb3', '#e6b3bb', '#e6b3cc', '#e6b3dd', '#ddb3e6', '#ccb3e6', '#bbb3e6', '#b3bbe6', '#b3cce6', '#b3dde6']
 const speed = 20
+const doublingScales = [1, 1.05, 1.07, 1.09, 1.1, 1.09, 1.07, 1.05, 1]
 
 export var xIndex: int = 0
 export var yIndex: int = 0
@@ -30,7 +31,7 @@ func sync_number():
 	
 func set_doublin_status(status: int):
 	doublingStatus = status
-	var newScale = 1.2 - abs(4 - doublingStatus) * 0.05
+	var newScale = doublingScales[status]
 	$ColorRect.rect_scale.x = newScale
 	$ColorRect.rect_scale.y = newScale
 	
